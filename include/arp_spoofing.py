@@ -6,6 +6,7 @@ clientIp = None
 clientMac = None
 gatewayIp = None
 gatewayMac = None
+myMac = None
 
 ## change arp table of gateway, target ##
 def spoofing():
@@ -32,9 +33,10 @@ def restore():
     send(packetForClient)
     send(packetForGateway)
     
-def set_variables(a, b, c, d):
-    global clientIp, clientMac, gatewayIp, gatewayMac
+def set_variables(a, b, c, d, e):
+    global clientIp, clientMac, gatewayIp, gatewayMac, myMac
     clientIp = a
     clientMac = b
     gatewayIp = c
     gatewayMac = d
+    myMac = e
