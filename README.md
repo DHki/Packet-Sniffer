@@ -1,2 +1,19 @@
-# Packet-Sniffer
-packet sniffer tool made by python, using module scapy
+Packet-Sniffer : using python, scapy module
+--
+### 선제조건
+>    1. 해커 PC와 타겟 기기가 동일 네트워크 상에 존재해야 한다.  
+>    2. 타겟 기기, 게이트웨이, 해커 PC의 IP/MAC 주소를 알고 있어야 한다.
+<br/>
+<br/>
+
+### 작동 원리
+>    해커 PC가 게이트웨이, 타겟 기기의 ARP 테이블을 변조시킨다.(ARP Spoofing)  
+>    이후 타겟 기기, 게이트웨이는 통신을 위해 패킷을 송신할 때 해커 PC로 패킷을 보내게 된다.  
+>    해커 PC는 패킷을 캡쳐해 출발지/도착지 MAC 주소를 변조시켜 패킷을 전송하며 둘 사이의 통신을 중계한다.  
+>    >    [ARP Spoofing 개념 알아보기](http://dongha-study.com/view.php?table=study&num=24)
+<br/>
+<br/>
+
+### 한계점
+>    1. 패킷 스니핑을 진행할 때, 타겟 기기의 인터넷 통신 속도가 비정상적으로 느려진다.  
+>    2. 타겟 기기가 새로운 사설 IP주소를 할당받은 경우 스니핑을 할 수 없다.
